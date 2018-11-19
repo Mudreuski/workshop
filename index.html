@@ -2,30 +2,34 @@
 <html lang="en">
 
 <head>
-    <title>fworkshop</title>
+    <title>Dratuti</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 </head>
 
 <body>
-    <button id="button">GET NEWS</button>
+    <div class="wrapper">
+        <button id="button" data-label="do it!" onclick="showMeNews()">GET NEWS</button>
+        <div id="container"></div>
+            <template id="template">
+            <article class="article">
+                <div class="article__description">
+                    <h2 class="article__title"></h2>
+                    <span class="article__author"></span>
+                    <p class="article__text"></p>
+                </div>
+                <img class="article__img" src="https://mma.prnewswire.com/media/494975/Kudelski_Security_Logo.jpg?p=facebook"
+                    alt="title">
+            </article>
+        </template>
+    </div>
 
-    <template> </template>
-    <article class="article">
-        <div class="article__description">
-            <h2 class="article__title">title</h2>
-            <span class="article__author">author</span>
-            <p class="article__text">description</p>
-        </div>
-        <img class="article__img" src="https://mma.prnewswire.com/media/494975/Kudelski_Security_Logo.jpg?p=facebook"
-            alt="title">
-    </article>
-
-
-
-    <script src="makeSumFn.js" defer></script>
-    <script src="test.js"></script>
+    <script src="js/button.js" defer></script>
+    <script src="js/draw.js"></script>
+    <script src="js/apiLoader.js"></script>
 </body>
 
 </html>

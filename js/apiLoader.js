@@ -6,7 +6,8 @@ function showMeNews() {
     fetch(req)
         .then(response => response.json())
         .then((data) => {
-            console.log(data)
+            console.log(data);
+            drawData(data.articles);
         });
 
 }
